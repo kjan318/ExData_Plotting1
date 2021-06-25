@@ -15,8 +15,8 @@ library(data.table)
 
 path <- getwd()
 
+#to extract specific variables from file
 featuresWanted <- c("Date","Global_active_power")
-
 dt_activepower <- fread(file.path(path, "data/household_power_consumption.txt"))[, featuresWanted, with = FALSE]
 
 # Change Date Column to Date Type
