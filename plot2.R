@@ -11,7 +11,7 @@ dt_activepower <- fread(file.path(path, "data/household_power_consumption.txt"),
 dt_activepower[, dateTime := as.POSIXct(paste(Date, Time), format = "%d/%m/%Y %H:%M:%S")]
 
 
-# Filter Dates for 2007-02-01 and 2007-02-02
+# To apply Filter to keep data between 2007-02-01 and 2007-02-02
 dt_activepower <- dt_activepower[(dateTime >= "2007-02-01") & (dateTime < "2007-02-03")]
 
 #covert "Global_active_power" to numberic 
